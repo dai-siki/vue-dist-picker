@@ -41,7 +41,7 @@ const collection = {
 				}
 			});
 		}
-		
+
 		return res;
 	}
 };
