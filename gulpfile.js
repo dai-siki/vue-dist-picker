@@ -55,7 +55,7 @@ gulp.task('js', function() {
 	gulp.src('./example/demo.js').pipe($.plumber({errorHandler: _errrHandler})).pipe(named(function() {
 		return 'demo-src';
 	})).pipe(webpack(webpack_config))
-    // .pipe($.uglify())
+    .pipe($.uglify())
     .pipe(gulp.dest('./example'));
 });
 
