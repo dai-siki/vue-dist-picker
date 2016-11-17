@@ -1,0 +1,116 @@
+$grey1: #DDD;
+$grey2: #f2f2f3;
+$c1: #d0000e;
+
+.vue-dist-picker {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font: 12px/1.5 'Microsoft YaHei',tahoma,arial,'Hiragino Sans GB','\\5b8b\4f53',sans-serif;
+	color: #666;
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: content-box;
+	}
+
+	input {
+		display: block;
+		width: 245px;
+		height: 28px;
+		padding-left: 6px;
+		border: 1px solid $grey1;
+		outline: none;
+		font-size: 14px;
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	.vdp-panel {
+		position: absolute;
+		z-index: 99999;
+		left: 0;
+		padding: 12px 10px 0;
+		width: 320px;
+		border: 1px solid $grey1;
+		box-shadow: 0 0 10px 0 $grey1;
+		overflow: hidden;
+		background-color: #FFF;
+
+		h5 {
+			margin-bottom: 5px;
+			padding-left: 2px;
+			color: #aaa;
+			line-height: 1.5;
+			font-weight: normal;
+		}
+
+		.vdp-tags {
+			margin: 5px 0;
+			border-bottom: 2px solid $c1;
+
+			&::after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+
+			li {
+				position: relative;
+				display: block;
+				bottom: -2px;
+				float: left;
+				margin-right: 6px;
+				width: 90px;
+				font-size: 12px;
+				line-height: 24px;
+				height: 25px;
+				text-align: center;
+				border: 1px solid #bbb;
+				border-bottom: none;
+				cursor: pointer;
+				font-weight: bold;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+
+				&.z-on {
+					color: $c1;
+					border-color: $c1;
+					border-width: 2px;
+					border-bottom: 2px solid #fff;
+				}
+			}
+		}
+
+		.vdp-list {
+			overflow: hidden;
+			border-bottom: 10px solid #fff;
+
+			ul {
+				padding: 10px 12px 20px;
+				line-height: 28px;
+				overflow: hidden;
+
+				li {
+					float: left;
+					display: block;
+					width: 70px;
+					padding-left: 4px;
+					cursor: pointer;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+
+					&:hover {
+						color: $c1;
+						background-color: $grey2;
+					}
+				}
+			}
+		}
+	}
+}

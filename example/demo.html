@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style media="screen">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			padding: 50px;
+		}
+
+		#app label {
+			display: block;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="app">
+		<label for="dist">收货地址</label>
+		<dist-picker field="dist" placeholder="选择您的收货地址" :value.sync="distId"></dist-picker>
+	</div>
+
+	<script src="demo-src.js"></script>
+</body>
+
+</html>
