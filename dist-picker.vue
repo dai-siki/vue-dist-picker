@@ -1,6 +1,6 @@
 <template>
 <div class="vue-dist-picker" @mouseout="endChoice" @mouseover="startMouseOver">
-	<input type="text" :name="field" :id="field" :placeholder="placeholder" :value="showName" @click="startChoice" @keypress="startChoice">
+	<input type="text" autocomplete="off" disableautocomplete :name="field" :id="field" :placeholder="placeholder" :value="showName" @click="startChoice" @keypress="startChoice">
 	<!--选择面板-->
 	<div class="vdp-panel" v-show="distPanelIsShow">
 		<h5>选择省市区</h5>
