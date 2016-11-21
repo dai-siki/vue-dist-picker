@@ -1,6 +1,7 @@
 $grey1: #DDD;
 $grey2: #f2f2f3;
-$c1: #d0000e;
+$c1: #d01;
+$c2: #dd606a;
 
 .vue-dist-picker {
 	position: relative;
@@ -36,7 +37,7 @@ $c1: #d0000e;
 		padding: 12px 10px 0;
 		width: 320px;
 		border: 1px solid $grey1;
-		box-shadow: 0 0 10px 0 $grey1;
+		box-shadow: 2px 2px 4px 0 #e5e5e5;
 		overflow: hidden;
 		background-color: #FFF;
 
@@ -50,7 +51,7 @@ $c1: #d0000e;
 
 		.vdp-tags {
 			margin: 5px 0;
-			border-bottom: 2px solid $c1;
+			border-bottom: 2px solid $c2;
 
 			&::after {
 				content: '';
@@ -64,12 +65,13 @@ $c1: #d0000e;
 				bottom: -2px;
 				float: left;
 				margin-right: 6px;
-				width: 90px;
+				padding: 0 4px;
+				width: 85px;
 				font-size: 12px;
 				line-height: 24px;
-				height: 25px;
+				height: 23px;
 				text-align: center;
-				border: 1px solid #bbb;
+				border: 1px solid #ccc;
 				border-bottom: none;
 				cursor: pointer;
 				font-weight: bold;
@@ -79,7 +81,7 @@ $c1: #d0000e;
 
 				&.z-on {
 					color: $c1;
-					border-color: $c1;
+					border-color: $c2;
 					border-width: 2px;
 					border-bottom: 2px solid #fff;
 				}
