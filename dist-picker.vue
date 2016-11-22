@@ -1,6 +1,6 @@
 <template>
 <div class="vue-dist-picker" @mouseout="endChoice" @mouseover="startMouseOver">
-	<input type="text" autocomplete="off" disableautocomplete :name="field" :id="field" :placeholder="placeholder" :value="showName" @click="startChoice" @keypress="startChoice">
+	<input type="text" autocomplete="off" disableautocomplete :name="field" :id="field" :placeholder="placeholder" :value="showName" @click="startChoice" @keypress="startChoice" @blur="endChoice" v-el:input>
 	<!--选择面板-->
 	<div class="vdp-panel" v-show="distPanelIsShow">
 		<h5>选择省市区</h5>
@@ -207,11 +207,14 @@ export default {
 			this.distPanelIsShow = true;
 		},
 		// 鼠标离开省市区选择区域时超过一定时间，关闭省市区面板
-		endChoice() {
-			let that = this;
-			that.isMouseOver = false;
+		endChoice(e) {
+			let that = this,
+				inputEle = that.$els.input;
+			if(e.type == 'mouseout') {
+				that.isMouseOver = false;
+			}
 			setTimeout(function() {
-				if (!that.isMouseOver) {
+				if (!that.isMouseOver && inputEle != document.activeElement) {
 					that.distPanelIsShow = false;
 				}
 			}, 1000);
