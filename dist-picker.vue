@@ -217,7 +217,7 @@ export default {
 				if (!that.isMouseOver && inputEle != document.activeElement) {
 					that.distPanelIsShow = false;
 				}
-			}, 1000);
+			}, 300);
 		},
 		startMouseOver() {
 			this.isMouseOver = true;

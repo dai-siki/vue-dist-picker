@@ -3,6 +3,18 @@ $grey2: #f2f2f3;
 $c1: #d01;
 $c2: #dd606a;
 
+@keyframes vueDistPicker {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0) scale(1);
+	}
+}
+
 .vue-dist-picker {
 	position: relative;
 	margin: 0;
@@ -37,9 +49,10 @@ $c2: #dd606a;
 		padding: 12px 10px 0;
 		width: 320px;
 		border: 1px solid $grey1;
-		box-shadow: 2px 2px 4px 0 #e5e5e5;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.18);
 		overflow: hidden;
 		background-color: #FFF;
+		animation: vueDistPicker 0.1s ease-out;
 
 		h5 {
 			margin-bottom: 5px;

@@ -1,6 +1,6 @@
 {
   "name": "vue-dist-picker",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "vue组件：中国省市区三联选择（pc端）",
   "main": "dist-picker.vue",
   "scripts": {
