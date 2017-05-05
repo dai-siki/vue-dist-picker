@@ -58,6 +58,10 @@ export default {
 			default: '',
 			twoWay: true
 		},
+		showName: {
+			default: '',
+			twoWay: true
+		},
 		placeholder: {
 			type: String,
 			default: ''
@@ -96,7 +100,6 @@ export default {
 			distPanelIsShow: false,
 			isMouseOver: false,
 			activatedTag, //1省 2市 3区
-			showName: '',
 			provList: DIST_PICKER_LIST['-1'],
 			provId,
 			cityId,
